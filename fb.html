@@ -4,14 +4,11 @@
 <meta charset="utf-8">
 </head>
 <body>
- <h1>test</h1>
-<script>
-function fb()
-{
-location = “https://m.facebook.com/"
-}
-setInterval(“fb()”, 10);
-</script>
+ <p>
+<input id="fbtxt" type="text" value="https://facebook.com/"> 
+<button onclick="window.location.href='fb://webview/?url=' + $('#fbtxt').val()">Go</button>
+</p>
+
 </body>
 </html> 
  

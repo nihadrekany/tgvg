@@ -1,14 +1,30 @@
 <html>
 <body>
-<script>  
-  function spoof() { 
-  document.write("<h1>This is not Bing</h1>");  
-  document.location = "https://bing.com:1234"; 
-    setInterval(function(){document.location="https://bing.com:1234";},9800); 
-  }; 
-</script> 
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-<p class="test"><input class="btn btn-success btn-lg" type="button" value="Run test case"  onclick="spoof();" />
-</p>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "100279291609920");
+      chatbox.setAttribute("attribution", "install_email");
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v11.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
 </body>
 </html>

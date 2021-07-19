@@ -1,0 +1,15 @@
+<html>
+<script>
+    function f() {
+        w = open(`example.com:`, 'win')
+        setTimeout(() => {
+            w.document.write('Helloooooooooooooooooo!')
+        }, 1000)
+    }
+</script>
+
+<a href="#" onload="f()"><h1>CLICK TO HERE TO DOS</a>
+    
+
+    </body>
+    </html>
